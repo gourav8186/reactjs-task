@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #F7F8F9;
+    font-family: "Rubik", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.height {
+    height: 100vh;
+}
+
+.inputBox {
+    position: relative;
+    margin: 20px 0px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CBCBCB;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+    font: 1em;
+}
+
+.inputBox .label {
+    position: absolute;
+    left: 5px;
+    top: -12px;
+    background-color: #F7F8F9;
+    padding: 0px 5px;
+    pointer-events: none;
+    font-size: 13px;
+    color: #6C25FF;
+    transform: translate(10px) translate(-7px);
+}
+.validate{
+    font-size: 13px;
+}
+.validate span{
+    color: red;
+}
+.rBtn label{
+    padding: 0px 10px;
+    font-size: 14px;
+}
+.rBtn input[type="radio"]{
+   width: 18px;
+   height: 18px;
+}
+.details{
+    border-bottom: 2px dashed #CBCBCB;
+}
+.details p{
+    color: #1D2226;
+    font-weight: 500;
 }
