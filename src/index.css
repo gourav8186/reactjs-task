@@ -70,3 +70,19 @@ input:valid{
     color: #1D2226;
     font-weight: 500;
 }
+.home{
+    justify-content: end;
+}
+.signUp{
+    justify-content: space-between;
+}
+@media only screen and (min-width: 991px){
+    .home{
+        width: 30% !important;
+        justify-content: center !important;
+    }
+    .signUp{
+        width: 70% !important;
+        justify-content:center !important;
+    }
+}

@@ -18,9 +18,6 @@ const StyledButton = styled.button.attrs((props) => ({
   cursor: pointer;
   transition: 0.2s ease-in;
   font-size: clamp(2.5rem, 1.077rem + 3.7936, 5.65251);
-  &:hover {
-    background-color: ${(props) => props.hoverColor};
-  }
   &:focus{
     background-color: #6C25FF;
   }

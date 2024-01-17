@@ -3,13 +3,12 @@ import Heading from "../components/Heading";
 import StyledButton from "../components/Button";
 import InputFields from "../components/InputFields";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Login = () => {
   const initialValues = { useremail: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
 
   const InputChange = (e) => {
@@ -20,15 +19,7 @@ const Login = () => {
   const FormSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
-    setIsSubmit(true);
   };
-
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors , isSubmit , formValues]);
 
   const validate = (values) => {
     const error = {};
@@ -41,14 +32,15 @@ const Login = () => {
     }
     if (!values.password) {
       error.password = "Password is required!";
-    }else if (values.password.length < 6) {
-      error.password = "password must be at least 6 characters long";
-    }else{
+    } else if (values.password.length < 6) {
+      error.password = "Password must be at least 6 characters long";
+    } else {
       navigate("/profile");
     }
 
     return error;
   };
+
   return (
     <div className="container p-3">
       <Heading

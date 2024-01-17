@@ -3,7 +3,7 @@ import Heading from "../components/Heading";
 import InputFields from "../components/InputFields";
 import StyledButton from "../components/Button";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Signup = () => {
   const initialValues = {
@@ -16,7 +16,6 @@ const Signup = () => {
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
 
   const InputChange = (e) => {
@@ -27,15 +26,8 @@ const Signup = () => {
   const FormSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
-    setIsSubmit(true);
   };
 
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors,formValues,isSubmit]);
 
   const validate = (values) => {
     const error = {};
@@ -74,7 +66,7 @@ const Signup = () => {
   };
   return (
     <form onSubmit={FormSubmit}>
-      <div className="signUp container d-flex flex-column justify-content-between height py-4">
+      <div className="signUp container d-flex flex-column height py-4">
         <div>
           <Heading heading="Create your PopX account" />
           <div className="row mx-auto">

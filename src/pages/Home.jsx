@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section>
-      <div className="container height d-flex justify-content-end flex-column py-3">
+      <div className="home container mx-auto height d-flex flex-column py-3">
         <div>
           <Heading
             heading="Welcome to PopX"
