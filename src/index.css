@@ -19,10 +19,10 @@
     width: 100%;
     padding: 10px;
     border: 1px solid #CBCBCB;
+    background-color: transparent !important;
     border-radius: 5px;
     font-size: 13px;
     outline: none;
-    font: 1em;
 }
 
 .inputBox .label {
@@ -36,11 +36,24 @@
     color: #6C25FF;
     transform: translate(10px) translate(-7px);
 }
+
+.inputBox input:focus{
+    background-color: #F7F8F9;
+}
+input:valid{
+    background-color: #F7F8F9 !important;
+}
+
+.inputBox p{
+    color: red;
+    background-color: transparent !important;
+}
 .validate{
     font-size: 13px;
 }
 .validate span{
     color: red;
+    background-color: #F7F8F9 !important;
 }
 .rBtn label{
     padding: 0px 10px;

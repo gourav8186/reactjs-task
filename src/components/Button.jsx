@@ -21,5 +21,8 @@ const StyledButton = styled.button.attrs((props) => ({
   &:hover {
     background-color: ${(props) => props.hoverColor};
   }
+  &:focus{
+    background-color: #6C25FF;
+  }
 `;
 export default StyledButton;

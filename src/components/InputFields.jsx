@@ -5,8 +5,9 @@ const InputFields = ({
   value,
   name,
   placeholder,
-  required,
   validate,
+  onChange,
+  error,
 }) => {
   const ValidateColor = {
     color: "red",
@@ -17,10 +18,10 @@ const InputFields = ({
     <div className="inputBox">
       <input
         type={type}
-        required={required}
         placeholder={placeholder}
         name={name}
         value={value}
+        onChange={onChange}
       />
       <div className="label">
         {label}
@@ -28,6 +29,7 @@ const InputFields = ({
           {validate}
         </span>
       </div>
+      <p>{error}</p>
     </div>
   );
 };

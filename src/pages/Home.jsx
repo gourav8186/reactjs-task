@@ -1,7 +1,5 @@
 import React from "react";
-import "../index.css";
 import StyledButton from "../components/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Heading from "../components/Heading";
 import { Link } from "react-router-dom";
 
